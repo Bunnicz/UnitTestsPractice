@@ -1,0 +1,25 @@
+name: Tests
+
+on: push
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get install -y libsndfile1
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install coverage
+      - name: Running tests
+        run: |
+          cd tests
+          pytest -vvv --disable-warnings
