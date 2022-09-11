@@ -1,9 +1,8 @@
-from pay.order import Order, LineItem
-from pay.payment import pay_order
-from pytest import MonkeyPatch
-
-from pay.processor import PaymentProcessor
 import pytest
+from pay.order import LineItem, Order
+from pay.payment import pay_order
+from pay.processor import PaymentProcessor
+from pytest import MonkeyPatch
 
 
 def test_pay_order(monkeypatch: MonkeyPatch) -> None:

@@ -1,7 +1,5 @@
-from pay.processor import PaymentProcessor
-from datetime import datetime
 import pytest
-
+from pay.processor import PaymentProcessor
 
 API_KEY = "6cfb67f3-6281-4031-b893-ea85db0dce20"
 

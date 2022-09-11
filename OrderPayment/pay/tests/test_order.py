@@ -1,4 +1,4 @@
-from pay.order import Order, LineItem
+from pay.order import LineItem, Order
 
 
 def test_order_empty() -> None:

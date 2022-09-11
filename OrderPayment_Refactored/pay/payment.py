@@ -2,7 +2,6 @@ from typing import Protocol
 
 from pay.credit_card import CreditCard
 from pay.order import Order
-from pay.processor import PaymentProcessor
 
 
 # Protocol since python 3.8 - Duck Typing

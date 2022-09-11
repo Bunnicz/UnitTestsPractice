@@ -1,7 +1,6 @@
 from datetime import date
 
 import pytest
-
 from pay.credit_card import CreditCard
 from pay.order import LineItem, Order, OrderStatus
 from pay.payment import pay_order
