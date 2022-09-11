@@ -19,7 +19,11 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
           pip install coverage
-      - name: Running tests
+      - name: Running tests 1
         run: |
-          cd tests
+          cd OrderPayment/pay/tests
+          pytest -vvv --disable-warnings
+      - name: Running tests 2
+        run: |
+          cd OrderPayment_Refactored/pay/tests
           pytest -vvv --disable-warnings
