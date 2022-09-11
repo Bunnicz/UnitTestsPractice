@@ -32,11 +32,13 @@ def test_card_number_invalid_luhn() -> None:
     processor = PaymentProcessor(API_KEY)
     assert processor.luhn_checksum("1249190007575068") == False
 
+
 def test_charge_card_valid() -> None:
     processor = PaymentProcessor(API_KEY)
     processor.charge("1249190007575069", 12, 2024, 100)
-    
+
+
 def test_charge_card_invalid() -> None:
     with pytest.raises(ValueError):
-        processor = PaymentProcessor(API_KEY)   
+        processor = PaymentProcessor(API_KEY)
         processor.charge("1249190007575068", 12, 2024, 100)
