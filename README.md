@@ -1,5 +1,9 @@
 # Python Unit Tests Practice with pytest and coverage plugin
 
+![Tests](https://github.com/Bunnicz/UnitTestsPractice/actions/workflows/linter_check.yml/badge.svg)
+![Tests](https://github.com/Bunnicz/UnitTestsPractice/actions/workflows/static_code_analysis_check.yml/badge.svg)
+![Tests](https://github.com/Bunnicz/UnitTestsPractice/actions/workflows/tests_check.yml/badge.svg)
+
 Repo is based on the simple order payment processor which checks credit card credentials e.g. card number via Luhn algorithm and card validity (expiration date).
 Running the script CLI asks user for credit card information and charges the card with static Line Items defined in main.py
 
