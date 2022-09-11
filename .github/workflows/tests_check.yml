@@ -22,8 +22,10 @@ jobs:
       - name: Running tests 1
         run: |
           cd OrderPayment/pay/tests
-          pytest -vvv --disable-warnings
+          pytest 
+          ## -vvv --disable-warnings
       - name: Running tests 2
         run: |
           cd OrderPayment_Refactored/pay/tests
-          pytest -vvv --disable-warnings
+          pytest 
+          ## -vvv --disable-warnings
