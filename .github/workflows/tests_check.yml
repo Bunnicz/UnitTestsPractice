@@ -19,16 +19,16 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
           pip install coverage
+          
       - name: Running tests 1
         run: |
           cd OrderPayment/pay/tests
-          echo "The API key is:${{secrets.API_KEY}}"
           pytest -vvv --disable-warnings
+          
       - name: Running tests 2
         env:
           ## Sets environment variable
           API_KEY: ${{secrets.API_KEY}}    
-
         run: |
           cd OrderPayment_Refactored/pay/tests
           pytest -vvv --disable-warnings
